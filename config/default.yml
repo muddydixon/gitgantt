@@ -1,0 +1,18 @@
+port: 6100
+log:
+  dir: "log"
+  level: "ALL"
+  format: ":remote-addr :NifId HTTP/:http-version :method :url :status :response-timems \":referrer\" \":user-agent\""
+  configure:
+    appenders:
+      - category: "system"
+        type: "console"
+      - category: "access"
+        type: "console"
+      - category: "error"
+        type: "console"
+    replaceConsole: false
+git:
+  url: "<YOUR GIT URL>"
+  projectId: null
+  token: "<YOUR PRIVATE TOKEN>"
